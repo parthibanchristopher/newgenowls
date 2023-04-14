@@ -97,10 +97,15 @@ export default function ClientDetails() {
     };
 
     return (
-        <>
-            <ClientData />
-            <WorkoutList />
-        </>
+        <Container>
+            <Row>
+                <ClientData />
+
+            </Row>
+            <Row>
+                <WorkoutList />
+            </Row>
+        </Container>
     );
 
 
