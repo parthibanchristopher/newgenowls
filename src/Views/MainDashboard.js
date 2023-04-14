@@ -18,6 +18,7 @@ export default function MainDashboard() {
         getClients(allClients);
     }
 
+
     useEffect(() => {
         getAllClients();
     }, []);
@@ -38,7 +39,7 @@ function ClientLink({ client }) {
     return (
 
         <Link
-            to={`post/${id}`}
+            to={`client/${id}`}
             style={{
                 width: "18rem",
                 marginLeft: "1rem",
