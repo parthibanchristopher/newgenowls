@@ -43,7 +43,7 @@ export default function WorkoutDetails() {
             Reps: {reps} <br />
 
             <Link
-                to={`editWorkout/${id}`}
+                to={`/workout/${id}/edit`}
                 style={{
                     marginLeft: "1rem",
                     marginTop: "2rem",

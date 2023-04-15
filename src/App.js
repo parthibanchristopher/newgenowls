@@ -4,6 +4,7 @@ import MainDashboard from "./Views/MainDashboard";
 import ClientDetails from "./Views/ClientDetails";
 import WorkoutDetails from "./Views/WorkoutDetails";
 import AddWorkout from "./Views/AddWorkout";
+import UpdateWorkout from "./Views/UpdateWorkout";
 import { NavigationBar } from "./Components/NavigationBar";
 
 function App() {
@@ -14,8 +15,9 @@ function App() {
       <Routes>
         <Route path="/" element={<MainDashboard />} />
         <Route path="/client/:clientId" element={<ClientDetails />} />
-        <Route path="client/:clientID/workout/:workoutId" element={<WorkoutDetails />} />
+        <Route path="workout/:workoutId" element={<WorkoutDetails />} />
         <Route path="/addWorkout" element={<AddWorkout />} />
+        <Route path="/workout/:workoutId/edit" element={<UpdateWorkout />} />
 
       </Routes>
     </BrowserRouter>

@@ -79,7 +79,7 @@ export default function ClientDetails() {
         return (
 
             <Link
-                to={`workout/${id}`}
+                to={`/workout/${id}`}
                 style={{
                     marginLeft: "1rem",
                     marginTop: "2rem",
