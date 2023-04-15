@@ -28,9 +28,37 @@ export default function MainDashboard() {
     };
 
     return (
-        <>
-            <ClientList />
-        </>
+        <div class="container" id=" main">
+            < div class="row" >
+                <div class="col-md-3" id="maincol">
+                    <h4>List of Clients:</h4>
+                    <ClientList />
+                </div>
+                <div class="col-md-9">
+
+                    <div class="row" >
+                        <div class="col-12" id="maincol">
+                            <h4>Current Schedule:</h4>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3" id="maincol">
+                            <h4>Upcoming Payment / Renewal</h4>
+                        </div>
+                        <div class="col-lg-3" id="maincol">
+                            <h4>Upcoming Program Updates</h4>
+                        </div>
+                        <div class="col-lg-6" id="maincol">
+                            <h4>Notification</h4>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div >
+
+        </div >
     );
 }
 
