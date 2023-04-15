@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { db, storage } from "../firebase";
 
 export default function AddWorkout() {
-
+    const [workoutName, setWorkoutName] = useState("");
     const [equipmentName, setEquipmentName] = useState("");
     const [sets, setSets] = useState(0);
     const [reps, setReps] = useState(0);
@@ -13,7 +13,7 @@ export default function AddWorkout() {
     const navigate = useNavigate();
 
     async function addPost() {
-        await addDoc(collection(db, "workout_sessions"), { equipmentName, sets, reps, clientId });
+        await addDoc(collection(db, "workout_sessions"), { equipmentName, sets, reps, clientId, workoutName });
         navigate("/");
     }
 
@@ -21,6 +21,16 @@ export default function AddWorkout() {
         <Container>
             <h1 style={{ marginBlock: "1rem" }}>Add Post</h1>
             <Form>
+                <Form.Group className="mb-3" controlId="workoutName">
+                    <Form.Label>Workout Name: </Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="Workout Name"
+                        value={workoutName}
+                        onChange={(text) => setWorkoutName(text.target.value)}
+                    />
+                </Form.Group>
+
                 <Form.Group className="mb-3" controlId="exerciseName">
                     <Form.Label>Exercise Name: </Form.Label>
                     <Form.Control

@@ -9,7 +9,7 @@ export function NavigationBar() {
                     <Navbar.Brand href="/">New Gen Owls</Navbar.Brand>
                     <Nav>
                         <Nav.Link href="/">New Client</Nav.Link>
-                        <Nav.Link href="/">Add Workout</Nav.Link>
+                        <Nav.Link href="/addWorkout">Add Workout</Nav.Link>
                         <Nav.Link href="/">Send Reminder</Nav.Link>
                     </Nav>
                 </Container>

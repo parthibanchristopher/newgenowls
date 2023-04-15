@@ -20,7 +20,7 @@ export default function ClientDetails() {
     const [workouts, setWorkouts] = useState([]);
 
     const params = useParams();
-    const id = params.id;
+    const id = params.clientId;
     const navigate = useNavigate();
 
     async function getWorkoutSessions(id) {
@@ -33,7 +33,6 @@ export default function ClientDetails() {
         console.log(workoutSessions)
         setWorkouts(workoutSessions);
     }
-
 
     async function getClient(id) {
         const clientDocument = await getDoc(doc(db, "clients", id));
@@ -55,7 +54,7 @@ export default function ClientDetails() {
     useEffect(() => {
         getClient(id);
         getWorkoutSessions(id);
-    }, []);
+    }, [id]);
 
     const ClientData = () => {
         return (
@@ -98,13 +97,9 @@ export default function ClientDetails() {
 
     return (
         <Container>
-            <Row>
-                <ClientData />
 
-            </Row>
-            <Row>
-                <WorkoutList />
-            </Row>
+            <ClientData />
+            <WorkoutList />
         </Container>
     );
 

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainDashboard from "./Views/MainDashboard";
 import ClientDetails from "./Views/ClientDetails";
 import WorkoutDetails from "./Views/WorkoutDetails";
+import AddWorkout from "./Views/AddWorkout";
 import { NavigationBar } from "./Components/NavigationBar";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<MainDashboard />} />
         <Route path="/client/:clientId" element={<ClientDetails />} />
         <Route path="client/:clientID/workout/:workoutId" element={<WorkoutDetails />} />
+        <Route path="/addWorkout" element={<AddWorkout />} />
 
       </Routes>
     </BrowserRouter>
