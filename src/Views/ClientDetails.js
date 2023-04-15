@@ -97,9 +97,34 @@ export default function ClientDetails() {
 
     return (
         <Container>
+            <div class="container" id=" main">
+                < div class="row" >
+                    <div class="col-md-3" id="maincol">
+                        <h5>Client Photo</h5>
+                        <img class="img-responsive" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="Chania" width="150" height="150" />
+                    </div>
+                    <div class="col-md-9" id="maincol">
+                        <h5>Client Progression</h5>
 
-            <ClientData />
-            <WorkoutList />
+                    </div>
+                </div>
+                < div class="row" >
+                    <div class="col-md-3" id="maincol">
+                        <h5>Client Particulars</h5>
+                        <ClientData />
+                    </div>
+                    <div class="col-md-3" id="maincol">
+                        <h5>Client Payment</h5>
+
+                    </div>
+                    <div class="col-md-6" id="maincol">
+                        <h5>Client Workout Schedule</h5>
+                        <WorkoutList />
+                    </div>
+                </div>
+            </div>
+
+
         </Container>
     );
 
