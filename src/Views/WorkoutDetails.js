@@ -36,33 +36,40 @@ export default function WorkoutDetails() {
     }, [id]);
 
     return (
-        <>
-            Workout: {workoutName} <br />
-            Exercise: {equipmentName} <br />
-            Sets: {sets} <br />
-            Reps: {reps} <br />
+        <Container>
+            <div class="container" id=" main">
+                <h5>{workoutName}</h5>
+                < div class="row" >
+                    <div class="col-md-4" id="maincol">
+                        <h5>Workout Details:</h5>
+                        Exercise: {equipmentName} <br />
+                        Sets: {sets} <br />
+                        Reps: {reps} <br />
+                    </div>
+                    <div class="col-md-8" id="maincol">
+                        <h5>Workout References:</h5>
+                    </div>
+                </div>
+                <Link
+                    to={`/workout/${id}/edit`}
+                    style={{
+                        marginLeft: "5rem",
+                        marginTop: "5rem",
+                    }}
+                >
+                    Edit Workout
+                </Link>
 
-            <Link
-                to={`/workout/${id}/edit`}
-                style={{
-                    marginLeft: "1rem",
-                    marginTop: "2rem",
-                }}
-            >
-                Edit
-                <br />
-            </Link>
-
-            <Link
-                onClick={() => deleteWorkout(id)}
-                style={{
-                    marginLeft: "1rem",
-                    marginTop: "2rem",
-                }}
-            >
-                Delete
-                <br />
-            </Link>
-        </>
+                <Link
+                    onClick={() => deleteWorkout(id)}
+                    style={{
+                        marginLeft: "5rem",
+                        marginTop: "5rem",
+                    }}
+                >
+                    Delete Workout
+                </Link>
+            </div>
+        </Container >
     );
 };
